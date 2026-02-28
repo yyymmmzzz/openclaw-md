@@ -66,7 +66,7 @@ import os
 smtp_server = "smtp.qq.com"
 smtp_port = 465
 sender_email = "78899690@qq.com"
-auth_code = "wtmkhteyhuktbgfh"
+auth_code = "yoqflhregdevbjaj"
 receiver_email = "78899690@qq.com"
 archive_path = "$ARCHIVE_PATH"
 archive_name = "$ARCHIVE_NAME"
