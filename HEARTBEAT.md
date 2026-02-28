@@ -4,12 +4,12 @@
 
 每天检查工作区备份状态，执行以下操作：
 
-### 1. GitHub/GitLab 备份
+### 1. GitHub 备份
 ```bash
 cd /workspace/projects/workspace
 git add -A
 git diff --cached --quiet || git commit -m "Auto backup: $(date '+%Y-%m-%d %H:%M:%S')"
-git push origin main 2>/dev/null || true
+git push origin main
 ```
 
 ### 2. 邮件备份
