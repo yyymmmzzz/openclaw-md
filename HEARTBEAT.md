@@ -3,14 +3,18 @@
 ## 每日备份检查任务
 
 每天检查工作区备份状态，执行以下操作：
-1. 检查 git 仓库状态
-2. 如果有未提交的更改，自动提交
-3. 如果配置了远程仓库，自动推送
 
-运行备份命令：
+### 1. GitHub/GitLab 备份
 ```bash
-source /workspace/projects/workspace/.env/backup.env 2>/dev/null || true
-/workspace/projects/workspace/scripts/backup.sh
+cd /workspace/projects/workspace
+git add -A
+git diff --cached --quiet || git commit -m "Auto backup: $(date '+%Y-%m-%d %H:%M:%S')"
+git push origin main 2>/dev/null || true
+```
+
+### 2. 邮件备份
+```bash
+/workspace/projects/workspace/scripts/backup-email.sh
 ```
 
 # Keep this file empty (or with only comments) to skip heartbeat API calls.
