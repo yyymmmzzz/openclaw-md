@@ -1,0 +1,6 @@
+# OpenClaw Workspace Daily Backup
+# Runs every day at 2:00 AM
+0 2 * * * /workspace/projects/workspace/scripts/backup.sh >> /workspace/projects/workspace/.backup.log 2>&1
+
+# Also run a test backup every 6 hours during development
+0 */6 * * * /workspace/projects/workspace/scripts/backup.sh >> /workspace/projects/workspace/.backup.log 2>&1
