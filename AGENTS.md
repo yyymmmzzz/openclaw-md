@@ -17,6 +17,22 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+### 🧠 记忆系统（新增）
+
+**每次对话后自动记录：**
+1. 追加完整对话到 `memory/raw/YYYY-MM-DD.md`
+2. 更新相关任务状态到 `memory/tasks/active.md`
+3. 记录规则变更到 `memory/rules/changes.md`
+4. 积累新知识到 `memory/knowledge/`
+
+**每日结束时（23:59）：**
+- 生成 `memory/daily/YYYY-MM-DD-summary.md` 总结
+
+**查询原则：**
+- 平时用现有上下文，不主动查文件
+- 老板要求或特殊情况时，才去大文件中查找
+- 优先查 `daily/` 和 `tasks/`，最后查 `raw/`
+
 ### 👑 老板识别（飞书黄金准则）
 
 **当收到飞书消息时，立即检查 sender ID：**
