@@ -1,0 +1,20 @@
+{
+  "chinese-memory": {
+    "embedding_model": "BAAI/bge-large-zh-v1.5",
+    "vector_db_path": "~/.openclaw/memory/vectors",
+    "use_local_model": true
+  },
+  "notification": {
+    "email": {
+      "smtp_host": "smtp.qq.com",
+      "smtp_port": 465,
+      "imap_host": "imap.qq.com",
+      "imap_port": 993,
+      "username": "78899690@qq.com",
+      "password": "yoqflhregdevbjaj"
+    }
+  },
+  "tavily-web-search": {
+    "api_key": "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"
+  }
+}

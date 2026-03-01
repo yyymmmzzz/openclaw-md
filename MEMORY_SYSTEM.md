@@ -131,6 +131,21 @@
 **实施时间**: 2026-03-01 01:20
 **状态**: ✅ 已完成初始搭建
 
+### 生命周期管理 (新增 2026-03-01)
+- ✅ 创建生命周期策略文档 `memory/lifecycle-policy.md`
+- ✅ 创建生命周期管理脚本 `scripts/memory-lifecycle.sh`
+- ✅ 集成到 HEARTBEAT.md 每日自动执行
+
+**生命周期规则:**
+| 记忆类型 | 生命周期 | 过期处理 |
+|---------|---------|---------|
+| working/ | 1 天 | 自动删除 |
+| short-term/conversations/ | 30 天 | 归档到 vault/ |
+| short-term/tasks/completed.md | 90 天 | 归档到 vault/ |
+| raw/ | 90 天 | 压缩为 tar.gz |
+| vault/ | 365 天 | 永久删除 |
+| long-term/ | 永久 | 不删除 |
+
 ### 已创建文件
 - ✅ `memory/index.md` - 总索引
 - ✅ `memory/long-term/identity/boss-profile.md` - 老板画像
